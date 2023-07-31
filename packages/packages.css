@@ -1,5 +1,5 @@
 main{
-    padding-top: 64px;
+    padding-top: 4rem;
 }
 
 .background{
@@ -7,8 +7,8 @@ main{
     background-size: cover;
     background-position: center;
     filter: grayscale(40%);
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     position: fixed;
     z-index: -1;
 }
@@ -19,13 +19,13 @@ main{
 }
 
 .packages + .packages{
-    padding-top: 10px;
+    padding-top: 0.63rem;
 }
 
 .package{
     display: block;
     margin: 0;
-    padding: 32px;
+    padding: 2rem;
     width: 80%;
     background-color: #c9efc9;
     color: #878787;
@@ -43,7 +43,7 @@ main{
 }
 
 .package--highlighted{
-    margin-top: 10px;
+    margin-top: 0.63rem;
     background-color: green;
     box-shadow: none;
 }
@@ -56,10 +56,10 @@ main{
     position: absolute;
     top: 0px;
     right: 0px;
-    margin: 20px;
+    margin: 1.2rem;
     z-index: 10;
 
-    font-size: 12px;
+    font-size: 1rem;
     color: white;
     background: #ff5454;
     padding: 10px;
@@ -74,7 +74,7 @@ main{
 }
 
 .package__info{
-    padding: 16px;
+    padding: 1rem;
     border: 1px green solid;
     color: green;
     border-radius: 0;

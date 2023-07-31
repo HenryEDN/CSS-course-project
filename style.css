@@ -21,11 +21,60 @@ body{
     /* background-image: linear-gradient(180deg, red 30%, rgba(168, 186, 133, 0.5) 70%); */
 
     /* background-image: radial-gradient(ellipse 20px 20px at 20% 50%, yellow, cyan 80%); */
-    width: 100%;
-    height: 528px;
+    width: 100vw;
+    height: 33vh;
     padding: 10px;
     position: relative;
 }
+
+.modal {
+    position: fixed;
+    display: none;
+    z-index: 200;
+    top: 20%;
+    left: 30%;
+    width: 40%;
+    background: white;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal__title {
+    text-align: center;
+    margin: 0 0 1rem 0;
+  }
+  
+  .modal__actions {
+    text-align: center;
+  }
+  
+  .modal__action {
+    border: 1px solid #0e4f1f;
+    background: #0e4f1f;
+    text-decoration: none;
+    color: white;
+    font: inherit;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+  }
+  
+  .modal__action:hover,
+  .modal__action:active {
+    background: #2ddf5c;
+    border-color: #2ddf5c;
+  }
+  
+  .modal__action--negative {
+    background: red;
+    border-color: red;
+  }
+  
+  .modal__action--negative:hover,
+  .modal__action--negative:active {
+    background: #ff5454;
+    border-color: #ff5454;
+  }
 
 .section-title {
     color: #2ddf5c;
@@ -36,8 +85,8 @@ body{
     color: white;
     font-family: 'Anton', sans-serif;
     position: absolute;
-    left: 48px;
-    bottom: 24px;
+    left: 5%;
+    bottom: 5%;
     padding: 0;
     margin: 0;
 }
@@ -53,13 +102,14 @@ body{
 .plan__list{
     width: 80%;
     margin: auto;
+    text-align: center;
 }
 
 .plan{
     background: #c9efc9;
     text-align: center;
-    padding: 16px;
-    margin: 8px;
+    padding: 1.2rem;
+    margin: 0.7rem;
     display: inline-block;
     width: 25%;
     vertical-align: middle;
@@ -72,7 +122,7 @@ body{
 }
 
 .plan__feature + .plan__feature{
-    margin: 8px 0px;
+    margin: 0.7rem 0;
 }
 
 .plan--highlighted{
@@ -84,7 +134,7 @@ body{
 .plan__annotation{
     background-color: white;
     color: green;
-    padding: 5px;
+    padding: 0.5rem;
     box-shadow: 2px 2px 2px 2px rgba(0 , 0, 0, 0.5);
     border-radius: 5px;
 }
@@ -111,7 +161,7 @@ body{
     font: inherit;
     font-weight: bold;
     border: 3px solid #015a01;
-    padding: 8px;
+    padding: 0.7rem;
     border-radius: 8px;
     cursor: pointer;
 }
@@ -127,8 +177,8 @@ body{
 
 #key-features{
     background-color: #f6517f;
-    margin-top: 80px;
-    padding: 16px;
+    margin-top: 7rem;
+    padding: 1.2rem;
 }
 
 #key-features .section-title{
@@ -137,35 +187,36 @@ body{
 
 .key-feature__list{
     text-align: center;
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
     list-style-type: none;
 }
 
 .key-feature{
     display: inline-block;
     vertical-align: top;
+    max-width: 20%;
 }
 
 .key-feature + .key-feature{
-    margin-left: 50px;
+    margin-left: 4rem;
 }
 
 .key-feature__description{
     text-align: center;
     color: white;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 1.8rem;
 }
 
 .key-feature__image{
     margin: 0 auto; /*circles centered*/
-    height: 128px;
-    width: 128px;
+    height: 10.6rem;
+    width: 10.6rem;
     background: white;
     border: 2px solid #424242;
     border-radius: 50%;
-    padding: 20px;
+    padding: 1.6rem;
 }
 
 h1 ~ p{
@@ -175,7 +226,7 @@ h1 ~ p{
 .main-header {
     /* width: 100%; */
     background-color: yellowgreen;
-    padding: 8px 16px;
+    padding: 0.7rem 1.3rem;
     position: fixed;
     top: 0;
     left: 0;
@@ -186,14 +237,14 @@ h1 ~ p{
 }
 
 .main-nav__item + .main-nav__item{
-    margin-left: 16px;
+    margin-left: 1.3rem;
 }
 
 .main-nav__item a{
     color: rgb(8, 65, 12);
     text-decoration: none;
     font-weight:  bold;
-    padding: 3px 0;
+    padding: 0.25rem 0;
 }
 
 /* .main-nav__item a::after{
@@ -210,7 +261,7 @@ h1 ~ p{
 .main-nav__item--cta a{
     color: white;
     background-color: red;
-    padding: 8px 16px;
+    padding: 0.7rem 1.3rem;
     border-radius: 8px;
 }
 
@@ -234,22 +285,22 @@ h1 ~ p{
 }
 
 .main-nav__items{
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 
 .main-header__brand{
     color: rgb(8, 65, 12);
     text-decoration: none;
     font-weight: bold;
-    font-size: 22px;
+    font-size: 1.8rem;
 }
 
 .main-footer{
     background-color: black;
     color: white;
-    padding: 32px;
-    margin-top: 48px;
+    padding: 2.7rem;
+    margin-top: 4rem;
 }
 
 .main-footer__links{
