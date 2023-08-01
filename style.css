@@ -8,7 +8,7 @@ body{
 }
 
 #product-overview {
-    margin-top: 43px;
+    margin-top: 2rem;
     background: linear-gradient(to top, rgba(80, 68, 18, 0.6) 10%, transparent), url("images/freedom.jpg") red 0% 30% / cover no-repeat border-box border-box;
 
     /* background-image: url("images/freedom.jpg");
