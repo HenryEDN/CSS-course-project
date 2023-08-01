@@ -193,6 +193,10 @@ body{
     color: #ccc;
 }
 
+.open{
+    display: block !important;
+}
+
 /* p::first-letter{
     color: red;
     font-size: 20px;

@@ -1,22 +1,60 @@
+//-------------Modal-------------
+//Open modal
 var backdrop = document.querySelector('.backdrop');
 var selectPlanButton = document.querySelectorAll('.plan button')
 var modal = document.querySelector('.modal');
+var negativeActionButton = document.querySelector('.modal .modal__action--negative');
+var toggleButton = document.querySelector('.toggle-button');
+var mobileNav = document.querySelector('.mobile-nav');
+var toggleButton = document.querySelector('.toggle-button');
+var mobileNav = document.querySelector('.mobile-nav');
+
 
 for (var i = 0; i < selectPlanButton.length; i++){
     selectPlanButton[i].addEventListener('click', function() {
-        backdrop.style.display = 'block';
-        modal.style.display = 'block';
-    })
+        // backdrop.style.display = 'block';
+        // modal.style.display = 'block';
+
+        // modal.className = 'open'; //Overrides the complete class list
+        
+        backdrop.classList.add('open');
+        modal.classList.add('open');
+
+    });
 }
 
-var negativeActionButton = document.querySelector('.modal .modal__action--negative');
 
-// console.log(negativeActionButton);
+backdrop.addEventListener('click', function(){
+    closeModal();
+    // mobileNav.style.display = 'none';
+    // backdrop.style.display ='none';
 
-negativeActionButton.addEventListener('click', function() {
-    backdrop.style.display = 'none';
-    modal.style.display = 'none';
+    backdrop.classList.remove('open');
+    mobileNav.classList.remove('open');
 });
+
+if(negativeActionButton){
+    negativeActionButton.addEventListener('click', closeModal());
+}
+
+
+function closeModal(){
+    // backdrop.style.display = 'none';
+    // modal.style.display = 'none';
+    backdrop.classList.remove('open');
+    if(modal){
+        modal.classList.remove('open');
+    }
+}
+
+toggleButton.addEventListener('click', function(){
+    // mobileNav.style.display = 'block';
+    // backdrop.style.display = 'block';
+    backdrop.classList.add('open');
+    mobileNav.classList.add('open');
+});
+
+// console.dir(backdrop.style['background-color']); //Alter
 
 // console.log(backdrop);
 // console.dir(backdrop);
