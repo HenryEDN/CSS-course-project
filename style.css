@@ -8,7 +8,7 @@ body{
 }
 
 #product-overview {
-    margin-top: 2rem;
+    margin-top: 3.2rem;
     background: linear-gradient(to top, rgba(80, 68, 18, 0.6) 10%, transparent), url("images/freedom.jpg") red 0% 30% / cover no-repeat border-box border-box;
 
     /* background-image: url("images/freedom.jpg");
@@ -57,6 +57,7 @@ body{
     font: inherit;
     padding: 0.5rem 1rem;
     cursor: pointer;
+    border-radius: 8px;
   }
   
   .modal__action:hover,
@@ -89,6 +90,7 @@ body{
     bottom: 5%;
     padding: 0;
     margin: 0;
+    font-size: 1.6rem;
 }
 
 .section-title{
@@ -100,7 +102,7 @@ body{
 
 
 .plan__list{
-    width: 80%;
+    width: 100%;
     margin: auto;
     text-align: center;
 }
@@ -109,10 +111,8 @@ body{
     background: #c9efc9;
     text-align: center;
     padding: 1.2rem;
-    margin: 0.7rem;
-    display: inline-block;
-    width: 25%;
-    vertical-align: middle;
+    margin-bottom: 0.7rem;
+    width: 100%;
 }
 
 .plan__features{
@@ -128,7 +128,6 @@ body{
 .plan--highlighted{
     background: #01a401;
     color: white;
-    box-shadow: 2px 2px 2px 2px rgba(0 , 0, 0, 0.5);
 }
  
 .plan__annotation{
@@ -137,6 +136,8 @@ body{
     padding: 0.5rem;
     box-shadow: 2px 2px 2px 2px rgba(0 , 0, 0, 0.5);
     border-radius: 5px;
+    margin: 0 10%;
+    min-width: 75%;
 }
 
 .plan__title{
@@ -175,6 +176,41 @@ body{
     outline: none;
 }
 
+/* Media query */
+@media (min-width: 40rem) and (min-height: 60rem){
+    #product-overview{
+        height: 40vh;
+        background-position: 50% 25%;
+    }
+
+    #product-overview h1{
+        font-size: 3rem;
+    }
+}
+
+@media (min-width: 40rem){
+    .plan{
+        margin: 0.7rem;
+        width: 25%;
+        display: inline-block;
+        min-width: 13rem;
+        vertical-align: middle;
+    }
+
+    .plan__list{
+        width: 90%;
+    }
+
+    .plan--highlighted {
+        box-shadow: 2px 2px 2px 2px rgba(0 , 0, 0, 0.5);
+    }
+
+    .plan__annotation{
+        margin: 0 0;
+        min-width: none;
+    }
+}
+
 #key-features{
     background-color: #f6517f;
     margin-top: 7rem;
@@ -192,14 +228,17 @@ body{
     list-style-type: none;
 }
 
-.key-feature{
-    display: inline-block;
-    vertical-align: top;
-    max-width: 20%;
-}
 
-.key-feature + .key-feature{
-    margin-left: 4rem;
+@media (min-width: 40rem){
+    .key-feature{
+        display: inline-block;
+        vertical-align: top;
+        max-width: 20%;
+    }
+    
+    .key-feature + .key-feature{
+        margin-left: 4rem;
+    }
 }
 
 .key-feature__description{
@@ -296,35 +335,7 @@ h1 ~ p{
     font-size: 1.8rem;
 }
 
-.main-footer{
-    background-color: black;
-    color: white;
-    padding: 2.7rem;
-    margin-top: 4rem;
-}
 
-.main-footer__links{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-
-.main-footer__link{
-    display: inline-block;
-}
-
-.main-footer__link a{
-    font-weight: bold;
-    color: inherit;
-    margin: 0 16px;
-    text-decoration: none;
-}
-
-.main-footer__link a:hover,
-.main-footer__link a:active{
-    color: #ccc;
-}
 
 /* p::first-letter{
     color: red;
