@@ -8,7 +8,6 @@ body{
 }
 
 #product-overview {
-    margin-top: 3.2rem;
     background: linear-gradient(to top, rgba(80, 68, 18, 0.6) 10%, transparent), url("images/freedom.jpg") red 0% 30% / cover no-repeat border-box border-box;
 
     /* background-image: url("images/freedom.jpg");
@@ -156,30 +155,10 @@ body{
     color: #015a01;
 }
 
-.button{
-    background-color: #015a01;
-    color: white;
-    font: inherit;
-    font-weight: bold;
-    border: 3px solid #015a01;
-    padding: 0.7rem;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-.button:hover, .button:active{
-    background-color: white;
-    color: #015a01;
-}
-
-.button:focus{
-    outline: none;
-}
-
 /* Media query */
-@media (min-width: 40rem) and (min-height: 60rem){
+@media (min-width: 40rem) and (min-height: 40rem){
     #product-overview{
-        height: 40vh;
+        height: 60vh;
         background-position: 50% 25%;
     }
 
@@ -188,7 +167,7 @@ body{
     }
 }
 
-@media (min-width: 40rem){
+@media (min-width: 65rem){
     .plan{
         margin: 0.7rem;
         width: 25%;
@@ -229,7 +208,7 @@ body{
 }
 
 
-@media (min-width: 40rem){
+@media (min-width: 65rem){
     .key-feature{
         display: inline-block;
         vertical-align: top;

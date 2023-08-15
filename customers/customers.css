@@ -1,10 +1,14 @@
+main{
+  padding-top: 2.5rem;
+}
+
 .testimonial {
     font-size: 1.2em;
   }
   
   
   .testimonial:first-of-type {
-    margin-top: 96px;
+    margin-top: 2.5rem;
   }
   
   .testimonial__image-container{
@@ -58,6 +62,10 @@
   
   .testimonial__text {
     margin: 0.2rem;
+    white-space: pre-line;
+    /* letter-spacing: 2px; */
+    /* font-stretch: ultra-condensed; */
+    /* font-variant: small-caps; */
   }
   
   @media (min-width: 40rem){

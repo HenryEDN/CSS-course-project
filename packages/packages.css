@@ -18,7 +18,7 @@ main{
     margin: 0;
 }
 
-.packages + .packages{
+.package + .package{
     padding-top: 0.63rem;
 }
 
@@ -34,6 +34,11 @@ main{
     text-decoration: none;
     text-align: left;
     position: relative;
+    margin-top: 0.63rem;
+}
+
+.package a{
+    text-decoration: none;
 }
 
 .package:hover, 
@@ -76,10 +81,17 @@ main{
 .package__info{
     padding: 1rem;
     border: 1px green solid;
-    color: green;
+    color: #055a05;
     border-radius: 0;
     box-shadow: none;
     background-color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 100;
+    line-height: 1.5;
+    /* font-style: italic; */
+    /* text-decoration: underline wavy red; */
+    /* text-shadow: 2px 2px 2px rgb(141, 138, 138); */
 
 }
 
@@ -106,22 +118,30 @@ main{
 
 @media (min-width: 40rem) {
     main {
-      margin: 3rem auto;
+      /* margin: 3rem auto; */
+      margin-left: auto;
+      margin-right: auto;
       max-width: 1500px;
     }
 }
 
 @media (min-width: 1500px) {
     .package {
-      border-left: 4px solid #0e4f1f;
+      border-left: 4px solid green;
     }
 
-    #free {
-      border-right: 4px solid #0e4f1f;
+    #free, #plus{
+      border-right: 4px solid green;
     }
 
     #free:hover,
-    #free:active {
-      border-right-color: #ff5454;
+    #free:active,
+    #plus:hover,
+    #plus:active,
+    .package:hover,
+    .package:active {
+        border: 5px solid rgb(245, 109, 109);
     }
+
+
 }
